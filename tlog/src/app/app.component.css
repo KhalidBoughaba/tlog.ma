@@ -1,0 +1,33 @@
+:root {
+    --black: #000;
+    --red: #ef0000;
+  }
+
+
+
+
+.home{
+    background-color: #000;
+    position: relative;
+}
+.home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/image/bg-maroc-design.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .info-home{
+    z-index: 1;
+}
+.home .info-home h2{
+    font-size: 45px;
+}
+.home .img-home{
+    z-index: 1;
+}
