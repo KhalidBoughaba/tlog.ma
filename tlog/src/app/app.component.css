@@ -1,33 +1,128 @@
-:root {
-    --black: #000;
-    --red: #ef0000;
-  }
 
+.circle {
+  position: absolute;
+  top: -165px;
+  left: -287px;
+}
 
+.home {
+  background-color: #000;
+  position: relative;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/image/bg-maroc-design.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+svg {
+  position: absolute;
+  bottom: -130px;
+  width: 100%;
+  height: auto;
+}
 
-
-.home{
-    background-color: #000;
+.home .info-home {
+  z-index: 1;
+}
+.home .info-home .title {
+  margin-bottom: 0.5em;
+  font-size: 50px;
+  line-height: 69px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+.home .info-home .text {
+  margin: 18px 0 30px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #667085;
+}
+.home .img-home {
+  z-index: 1;
+}
+.btn-home{
+    background: #ef0000;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #e30613;
+    overflow: hidden;
     position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    padding-top: 27px;
+    padding-bottom: 27px;
 }
-.home::after{
-    content: "";
+.btn-home .icon {
+    background: white;
+    margin-left: 1em;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../assets/image/bg-maroc-design.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.home .info-home{
-    z-index: 1;
-}
-.home .info-home h2{
-    font-size: 45px;
-}
-.home .img-home{
-    z-index: 1;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #e30613;
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .btn-home:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .btn-home .icon i {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #ef0000;
+   }
+   
+   .btn-home:hover .icon i {
+    transform: translateX(0.1em);
+   }
+   
+   .btn-home:active .icon {
+    transform: scale(0.95);
+   }
+   
+   .caranimation{
+    /* animation: car-animation 1s infinite; */
+    animation-name: car;
+    position: absolute;
+    top: 410px;
+    left: 284px;
+    animation-duration: 2s;
+   }
+   .caranimation .tlogCar{
+    width: 200px;
+   }
+
+   @keyframes car {
+    0% {
+      position: absolute;
+    }
+    100% {
+      position: absolute;
+      right: 10px;
+    }
+   }
+
